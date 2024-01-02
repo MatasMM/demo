@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "metodai:string":"node --watch metodai/string.js",
     "metodai:number":"node --watch metodai/number.js",
     "tipas": "node --watch kintamieji/tipas.js",
     "marksAverage": "node --watch funkcions/marksAverage.js",
