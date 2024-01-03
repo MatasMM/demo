@@ -127,3 +127,46 @@ console.log(raides);
 
 const raides2 = 'vvvvasara'.split('vasa');
 console.log(raides2);
+
+console.log('-----------------');
+
+console.log('Pomidoras'.toLowerCase());
+console.log('Pomidoras'.toUpperCase());
+
+const pomBad = 'PoMiDoRaS';
+
+
+function makeItGood(text) {
+    return text[0].toUpperCase() + text.slice(1).toLowerCase();
+    //return text.toLowerCase()
+    //    .replace(text[0], text[0].toUpperCase());
+}
+
+const pomGood = makeItGood(pomBad);
+console.log(pomBad, '--->', pomGood);
+
+console.log('------------------');
+
+console.log(`"${'labas'.trim()}"`);
+console.log(`"${'labas'.trimStart()}"`);
+console.log(`"${'labas'.trimEnd()}"`);
+
+console.log(`"${'rikiki     '.trim()}"`);
+console.log(`"${'rikiki     '.trimStart()}"`);
+console.log(`"${'rikiki     '.trimEnd()}"`);
+
+console.log(`"${'       rikiki'.trim()}"`);
+console.log(`"${'       rikiki'.trimStart()}"`);
+console.log(`"${'       rikiki'.trimEnd()}"`);
+
+console.log(`"${'       rokoko'.trim()}"`);
+console.log(`"${'       rokoko'.trimStart()}"`);
+console.log(`"${'       rokoko'.trimEnd()}"`);
+
+console.log(`"${'   pomidoras     '.trim()}"`);
+console.log(`"${'   pomidoras     '.trimStart()}"`);
+console.log(`"${'   pomidoras     '.trimEnd()}"`);
+
+console.log(`"${'labas      rytas'.trim()}"`);
+console.log(`"${'labas      rytas'.trimStart()}"`);
+console.log(`"${'labas      rytas'.trimEnd()}"`);
