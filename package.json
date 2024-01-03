@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "arrow":"node --watch funkcions/arrow.js",
     "metodai:array":"node --watch metodai/array.js",
     "metodai:string":"node --watch metodai/string.js",
     "metodai:number":"node --watch metodai/number.js",
