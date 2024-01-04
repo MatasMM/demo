@@ -97,3 +97,47 @@ console.log(numbers.slice(0, -2));
 
 console.log('------------------');
 
+const names = [];
+console.log(names);
+
+const n1 = names.push('Jonas')
+console.log(n1, names);
+
+const n2 = names.push('Ona')
+console.log(n2, names);
+
+const n3 = names.push('Petras')
+console.log(n3, names);
+
+const n4 = names.push('Maryte')
+console.log(n4, names);
+
+const n5 = names.pop();
+console.log(n5, names);
+
+const n6 = names.pop();
+console.log(n6, names);
+
+const n7 = names.unshift('Juozas');
+console.log(n7, names);
+
+const n8 = names.unshift('Barbora');
+console.log(n8, names);
+
+const n9 = names.shift();
+console.log(n9, names);
+
+const n10 = names.shift();
+console.log(n10, names);
+
+console.clear();
+console.log('---------------------');
+
+const colors = ['red', 'blue', 'yellow', 'pink', 'green', 'orange', 'violet'];
+console.log(colors);
+
+colors.splice(3, 0)
+console.log(colors);
+
+colors.splice(3, 1, 'BLACK', 'WHITE', 'A', 'B', 'C', 'D');
+console.log(colors);
