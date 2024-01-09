@@ -11,6 +11,7 @@ BAZINEI PROGRAMAVIMO KONCEPAI
     - boolean
     - array
     - undefined
+    - null
 - if
 - for
 - function
