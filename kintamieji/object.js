@@ -1,3 +1,5 @@
+import spausdintiSvente from "./spauzdintiSvente.js";
+
 /*
 OBJECT - objiektas
 */
@@ -121,3 +123,21 @@ console.log(summer.months);
 console.log(summer.months[0]);
 console.log(summer.months[1]);
 console.log(summer.months[2]);
+
+console.clear();
+
+console.log(summer.holidays[0].name);
+console.log(summer.holidays[0].date);
+console.log(summer.holidays[0].date.year);
+console.log(summer.holidays[0].date.month);
+console.log(summer.holidays[0].date.day);
+
+console.clear()
+
+// 1) Jonines - 2024m Birzelio 23d.
+// 2) Mindaugo karunavimas - 2024m Liepos 6d.
+
+for (let i = 0; i < summer.holidays.length; i++) {
+    const text = spausdintiSvente(i, summer.holidays[i]);
+    console.log(text);
+}
