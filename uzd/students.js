@@ -229,3 +229,37 @@ const findStudentWithLargestNumberOfMarks = (students) => {
 const studentWithLargestNumberOfMarks = findStudentWithLargestNumberOfMarks(students);
 
 console.log(`The student with the largest number of marks is: ${studentWithLargestNumberOfMarks}`);
+
+const compareStudents = (a, b) => {
+    if (a.name < b.name) {
+        return -1;
+    } else if (a.name > b.name) {
+        return 1;
+    } else {
+        const avgA = a.marks.reduce((sum, mark) => sum + mark, 0) / a.marks.length;
+        const avgB = b.marks.reduce((sum, mark) => sum + mark, 0) / b.marks.length;
+
+        return avgA - avgB;
+    }
+};
+
+const sortedStudents = students.slice().sort(compareStudents);
+
+console.log(sortedStudents);
+
+const compareStudentsDescending = (a, b) => {
+    if (a.name < b.name) {
+        return 1;
+    } else if (a.name > b.name) {
+        return -1;
+    } else {
+        const avgA = a.marks.reduce((sum, mark) => sum + mark, 0) / a.marks.length;
+        const avgB = b.marks.reduce((sum, mark) => sum + mark, 0) / b.marks.length;
+
+        return avgB - avgA;
+    }
+};
+
+const sortedStudentsDescending = students.slice().sort(compareStudentsDescending);
+
+console.log(sortedStudentsDescending);
