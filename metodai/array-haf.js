@@ -1,12 +1,12 @@
 /* HOF - higher order function */
-/* "tevine" fukcija, kuri gauna kita funkcija kaip argumenta */
+/* "tevine" funkcija, kuri gauna kita funkcija kaip argumenta */
 
 function doubleTrouble(n) {
     if (n * 2 > 10) {
-        return 10
+        return 10;
     }
 
-    return n * 2
+    return n * 2;
 }
 
 const marks = [10, 2, 8, 4, 6];
@@ -14,13 +14,13 @@ console.log(marks);
 
 const doubleMarks = [];
 
-for (let i=0; i< marks.length; i++){
-        doubleMarks.push(doubleTrouble(marks[i]));
+for (let i = 0; i < marks.length; i++) {
+    doubleMarks.push(doubleTrouble(marks[i]));
 }
 
 console.log(doubleMarks);
 
-console.log('-------------------------------------');
+console.log('--------------------------------');
 
 const doubleMarksMap = marks.map(doubleTrouble);
 console.log(doubleMarksMap);
@@ -38,7 +38,7 @@ const bool = [true, false, true, false, true, false, true, false];
 const allTrue = bool.map(x => true);
 console.log(allTrue);
 
-const students = ['Jonas', 'Maryte', 'petras', 'Ona']
+const students = ['Jonas', 'Maryte', 'Petras', 'Ona'];
 const inicialai = students.map(s => s[0]);
 console.log(inicialai);
 
@@ -51,8 +51,9 @@ const matrix = [
 ];
 // [2, 1, 3, 5, 1]
 const matrixCount = matrix.map(m => m.length);
-const matrixFirstFalue = matrix.map(m => m[0]);
+const matrixFirtsValue = matrix.map(m => m[0]);
 console.log(matrixCount);
+console.log(matrixFirtsValue);
 
 const mandarinai = [
     [true, false],
@@ -63,10 +64,10 @@ const mandarinai = [
 ];
 // [1, 1, 3, 0, 3]
 
-function primokusiuMandarinukiekis(krepselis) {
+function prinokusiuMandarinuKiekis(krepselis) {
     let geruKiekis = 0;
 
-    for (let i=0; i<krepselis.length; i++){
+    for (let i = 0; i < krepselis.length; i++) {
         const mandarinas = krepselis[i];
         if (mandarinas === true) {
             geruKiekis++;
@@ -76,15 +77,15 @@ function primokusiuMandarinukiekis(krepselis) {
     return geruKiekis;
 }
 
-const prinokusiuKiekis = mandarinai.map(primokusiuMandarinukiekis)
-console.log(prinokusiuKiekis);
+const prinukusiuKiekis = mandarinai.map(prinokusiuMandarinuKiekis);
+console.log(prinukusiuKiekis);
 
 console.clear();
 
-function filterAllowedPeaple(weight) {
-    const weightsLimit = 80;
+function filterAllowedPeople(weight) {
+    const weightLimit = 80;
 
-    if (weight > weightsLimit) {
+    if (weight > weightLimit) {
         return false;
     }
 
@@ -92,13 +93,41 @@ function filterAllowedPeaple(weight) {
 }
 
 const weights = [100, 10, 50, 70, 66, 99, 150, 20];
-
-const allowedWeight = [];
+const allowedWeights = [];
 
 for (let i = 0; i < weights.length; i++) {
-    if (filterAllowedPeaple(weights[i])) {
-        allowedWeight.push(weights[i])
+    if (filterAllowedPeople(weights[i])) {
+        allowedWeights.push(weights[i]);
     }
 }
 
-console.log(allowedWeight);
+console.log(allowedWeights);
+
+const allowedWeightsFilter = weights.filter(filterAllowedPeople);
+console.log(allowedWeightsFilter);
+
+const allowedWeights2 = weights.filter(w => w > 80);
+console.log(allowedWeights2);
+
+const allowedWeights3 = weights.filter(w => w <= 80);
+console.log(allowedWeights3);
+
+const allowedWeights4 = weights.filter(w => w <= 80 && w > 30);
+console.log(allowedWeights4);
+
+const allowedWeights5 = weights.map(w => w <= 80 && w > 30);
+console.log(weights);
+console.log(allowedWeights5);
+
+const mandarinai2 = [
+    [true, false],
+    [true],
+    [true, true, true],
+    [false, false, false, false, false],
+    [true, true, true, false],
+];
+// [1, 1, 3, 0, 3]
+
+const mandarinaiFilter = mandarinai2
+    .map(krep => krep.filter(mand => mand === true).length);
+console.log(mandarinaiFilter);

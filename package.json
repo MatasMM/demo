@@ -5,6 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "number-size": "node --watch uzd/number-size.js",
     "object": "node --watch kintamieji/object.js",
     "biggest":"node --watch uzd/biggest.js",
     "text-reverse":"node --watch uzd/text-reverse.js",
