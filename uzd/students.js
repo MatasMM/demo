@@ -107,7 +107,7 @@ const differenceMarks = students.map((student) => ({
 console.log(differenceMarks);
 
 const findStudentWithSmallestMark = (students) => {
-    let smallestStudent = null;
+    let smallestStudent = '';
     let smallestMark = Infinity;
 
     for (const student of students) {
